@@ -10,18 +10,13 @@ import type {PropsWithChildren} from 'react';
 import {Image, StyleSheet, Text, useColorScheme, View} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import WelcomeScreen from './src/screens/WelcomeScreen';
 
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
 function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
   /*
    * To keep the template simple and small we're adding padding to prevent view
    * from rendering under the System UI.
@@ -32,7 +27,11 @@ function App(): React.JSX.Element {
    * https://github.com/react-native-community/discussions-and-proposals/discussions/827
    */
 
-  return <View style={backgroundStyle}></View>;
+  return (
+    <View>
+      <WelcomeScreen></WelcomeScreen>
+    </View>
+  );
 }
 
 export default App;
