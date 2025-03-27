@@ -32,7 +32,7 @@ function App(): React.JSX.Element {
    * https://github.com/react-native-community/discussions-and-proposals/discussions/827
    */
 
-  return <View style={backgroundStyle}></View>;
+  return <View></View>;
 }
 
 export default App;
